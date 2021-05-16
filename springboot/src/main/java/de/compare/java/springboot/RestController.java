@@ -1,4 +1,4 @@
-package de.compare.springboot;
+package de.compare.java.springboot;
 
 import org.springframework.web.bind.annotation.GetMapping;
 

@@ -1,20 +1,31 @@
 # HelloWorldCompare
-Compare How many space need different programming languages in Docker Images.
-Application always the same. Hello World over rest endpoint with a simple test.
+
+Compare How many space need different programming languages in Docker Images. Application always the same. Hello World
+over rest endpoint with a simple test.
 
 ![img.png](img.png)
 
-##Ranking
+## Ranking
 
-### 1. Java (Spring Boot) 
+### 1. Java (Plain)
 
 ---
-####Docker Image Size => 208 MB (Traditional Docker Build)
-  
+
+#### Docker Image Size => 191 MB
+
+- Runtime: adoptopenjdk/openjdk15:alpine-jre => 191MB
+- Application: Java 15 => 3 KB
+
+### 2. Java (Spring Boot)
+
+---
+
+#### Docker Image Size => 208 MB (Traditional Docker Build)
+
 - Runtime: adoptopenjdk/openjdk15:alpine-jre => 191MB
 - Application: Java 15 / Spring Boot 2.4.5 => 17 MB
-  
-####Docker Image Size => 208 MB (Layered Docker Build)
+
+#### Docker Image Size => 208 MB (Layered Docker Build)
 
 - Runtime: adoptopenjdk/openjdk15:alpine-jre => 191 MB
 - Application: Java 15 / Spring Boot 2.4.5 => 17 MB
