@@ -1,0 +1,10 @@
+FROM golang:1.16-alpine AS builder
+# Build executable stage
+WORKDIR /src
+COPY app/application.go .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o go -ldflags="-w -s" application.go
+
+# Build final image
+FROM scratch
+COPY --from=builder /src/go /usr/bin/
+ENTRYPOINT ["go"]

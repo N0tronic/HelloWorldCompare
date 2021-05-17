@@ -1,0 +1,6 @@
+FROM golang:1.16-alpine
+# Build executable stage
+WORKDIR /src
+COPY app .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /app -ldflags="-w -s" application.go
+CMD ["/app"]
